@@ -1,8 +1,38 @@
 <template>
-    <lightning-card title="Account Quick Create" icon-name="custom:custom14" >
-        <lightning-record-form object-api-name="Account" fields={accFields} columns="2" mode="edit" layout-type="Compact" ></lightning-record-form>
+    <lightning-card title="Account Quick Create" icon-name="standard:account">
+      <div class="slds-p-horizontal_small">
+        <lightning-record-form
+          object-api-name="Account"
+          record-id={strRecordId}
+          columns="2"
+          mode="edit"
+          fields={arrayFields1}
+          onsubmit={handleReset}>
+        ></lightning-record-form>
+      </div>
     </lightning-card>
-    <lightning-card title="Contact Quick Create" icon-name="custom:custom14" >
-        <lightning-record-form object-api-name="Contact" fields={fields} columns="2" mode="edit" layout-type="Compact" ></lightning-record-form>
+    <lightning-card title="Contact Quick Create" icon-name="standard:contact">
+      <div class="slds-p-horizontal_small">
+        <lightning-record-form
+          object-api-name="Contact"
+          record-id={strRecordIdContact}
+          columns="2"
+          mode="edit"
+          fields={arrayFields2}
+          onsubmit={handleSubmit}>
+        ></lightning-record-form>
+      </div>
     </lightning-card>
-</template>
+    <lightning-card title="Opportunity Quick Create" icon-name="standard:opportunity">
+      <div class="slds-p-horizontal_small">
+        <lightning-record-form
+          object-api-name="Opportunity"
+          record-id={strRecordIdOpportunity}
+          columns="2"
+          mode="edit"
+          fields={arrayFields3}
+          onsubmit={handleSubmit}>
+        ></lightning-record-form>
+      </div>
+    </lightning-card>
+  </template>
